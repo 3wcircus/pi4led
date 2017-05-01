@@ -13,7 +13,7 @@ public class LedController {
 
     @RequestMapping("/")
     public String greeting() {
-        return "Howdy!";
+        return "--- SYSTEM ONLINE ---";
     }
 
     @RequestMapping("/light")
