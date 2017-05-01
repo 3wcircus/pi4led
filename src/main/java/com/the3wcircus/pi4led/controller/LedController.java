@@ -36,9 +36,11 @@ public class LedController {
 
         if (pin1!=null) {
             pin1.pulse(1000,true);
+            pin1.low();
         }
         if (pin2!=null) {
             pin2.pulse(1000,true);
+            pin2.low();
         }
 
         return "--- SYSTEM OFFLINE ---";
