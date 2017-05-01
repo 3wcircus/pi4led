@@ -33,6 +33,14 @@ public class LedController {
     @RequestMapping("/stop")
     public String shutdownGpio() {
         GpioFactory.getInstance().shutdown();
+
+        if (pin1!=null) {
+            pin1.pulse(1000,true);
+        }
+        if (pin2!=null) {
+            pin2.pulse(1000,true);
+        }
+
         return "--- SYSTEM OFFLINE ---";
     }
 }
