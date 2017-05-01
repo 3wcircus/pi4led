@@ -29,4 +29,15 @@ public class LedController {
 
         return "FLAME ON!!!";
     }
+
+    @RequestMapping("/stop")
+    public String shutdownGpio() {
+        if (GpioFactory.getInstance().isShutdown()) {
+            GpioFactory.getInstance().shutdown();
+            return "--- SYSTEM OFFLINE ---";
+        } else {
+
+            return "--- SYSTEM UNAVAILABLE  ---";
+        }
+    }
 }
